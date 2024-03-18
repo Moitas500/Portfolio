@@ -18,22 +18,22 @@ export class SideBarComponent {
 
   public listOptions: Options[] = [
     {
-      icon: '',
+      icon: 'home',
       route: '/home',
       title: 'Home'
     },
     {
-      icon: '',
+      icon: 'person',
       route: '/profile',
       title: 'Profile'
     },
     {
-      icon: '',
+      icon: 'folder_open',
       route: '/portfolio',
       title: 'Portfolio'
     },
     {
-      icon: '',
+      icon: 'mail',
       route: '/contact',
       title: 'Contact'
     }
