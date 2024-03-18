@@ -1,0 +1,35 @@
+.side-bar {
+    align-items: center;
+    display: flex;
+    opacity: 1;
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transition: opacity .3s;
+    -webkit-transition: opacity .3s;
+    z-index: 3;
+    z-index: 2;
+}
+
+.icon-item {
+    background-color: var( --main-primary-color );
+    align-items: center;
+    background: #2b2a2a;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    height: 50px;
+    list-style: none;
+    margin: 20px 0;
+    position: relative;
+    transition: .3s;
+    width: 50px;
+}
+
+.side-bar ul.icon-menu {
+    margin: 0;
+    padding: 0;
+}
+
