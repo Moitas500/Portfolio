@@ -1,48 +1,56 @@
+import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
-interface Options {
+interface Option {
   route: string,
   title: string,
-  icon: string
+  icon: string,
+  selected: boolean
 }
 
 @Component({
   selector: 'app-side-bar',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './side-bar.component.html',
   styleUrl: './side-bar.component.css'
 })
 export class SideBarComponent {
 
-  public listOptions: Options[] = [
+  public listOptions: Option[] = [
     {
       icon: 'home',
       route: '/home',
-      title: 'Home'
+      title: 'Home',
+      selected: true,
     },
     {
       icon: 'person',
       route: '/profile',
-      title: 'Profile'
+      title: 'Profile',
+      selected: false,
     },
     {
       icon: 'folder_open',
       route: '/portfolio',
-      title: 'Portfolio'
+      title: 'Portfolio',
+      selected: false,
     },
     {
       icon: 'mail',
       route: '/contact',
-      title: 'Contact'
+      title: 'Contact',
+      selected: false,
     }
   ] 
 
   private _router = inject( Router )
 
-  navigateTo( route: string ) {
-    this._router.navigate([route])
+  navigateTo( item: Option ) {
+    this.listOptions.forEach( option => option === item ? option.selected = true : option.selected = false )
+
+    this._router.navigate([item.route])
   }
 
 }

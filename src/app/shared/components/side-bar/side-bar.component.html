@@ -1,15 +1,13 @@
-<div class="side-bar">
-
-    <ul class="icon-menu">
+<nav class="navbar">
+    <ul class="options-navbar">
         @for (item of listOptions; track $index) {
-            <li class="icon-item" (click)="navigateTo( item.route)">
-                <span class="material-symbols-outlined">
-                    {{ item.icon }}
-                </span>
+            <li [ngClass]="{ 'selected-icon': item.selected}" class="icon-menu option" (click)="navigateTo( item )"> 
+                <div class="nav-link primary">
+                    <span class="material-symbols-outlined icon">{{ item.icon }}</span>
 
-                <h2> {{ item.title }} </h2>
+                    <span class="link-text">{{ item.title }}</span>
+                </div>
             </li>
         }
     </ul>
-
-</div>
+</nav>
