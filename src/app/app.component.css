@@ -1,0 +1,11 @@
+div .color-block {
+    height: 200%;
+    left: -83%;
+    position: fixed;
+    top: -50%;
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+    width: 100%;
+    background-color: var(--main-primary-color);
+    z-index: -1;
+}
